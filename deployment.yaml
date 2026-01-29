@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ayfilla-cloud-demo
+  namespace: demo
+  labels:
+    app: ayfilla-cloud-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ayfilla-cloud-demo
+  template:
+    metadata:
+      labels:
+        app: ayfilla-cloud-demo
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/ayfilla/ayfilla-cloud-demo:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+
