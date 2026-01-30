@@ -6,7 +6,7 @@ metadata:
   labels:
     app: ayfilla-cloud-demo
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: ayfilla-cloud-demo
